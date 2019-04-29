@@ -1,0 +1,211 @@
+$font: 'Exo 2', sans-serif;
+$dark-grey: #747d8c;
+$orange: #ffa502;
+$green: #2ed573;
+$blue: #1e90ff;
+$coral: #ff7f50;
+
+* {
+	box-sizing: border-box;
+}
+body {
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+.header {
+  text-transform: uppercase;
+  font : {
+    size: 50px;
+    weight: 800;
+  }
+  line-height: 65px;
+  &Span1 {
+    color: $dark-grey;
+    font : {
+      family: $font;
+      size: 80px;
+    }
+    text-transform: none;
+  }
+  &Span2 {
+    color: $orange;
+  }
+  &Span3 {
+    color: $green;
+  }
+  &Span4 {
+    color: $blue;
+  }
+}
+.newGameBtn {
+  padding: 10px 65px 15px;
+  cursor: pointer;
+  border: 4px solid $coral;
+  border-radius: 25px;
+  font : {
+    family: $font;
+    weight: bold;
+    size: 25px;
+  }
+  color: $coral;
+  background : {
+    image: linear-gradient(45deg, $coral 50%, transparent 50%); 
+    color: inherit;
+    position: 100% 0;
+    size: 300%;
+  }
+  transition: 0.5s;
+  &:hover {
+    background-position: 0 100%;
+    color: white;
+  }
+}
+.result {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 600px;
+  font-family: $font;
+  font-size: 25px;
+  color: $dark-grey;
+  border: 4px solid;
+  border-radius: 25px;
+  &Paragraph {
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+}
+.outputResult {
+  font-size: 20px;
+  font-weight: 700;
+  color: $dark-grey;
+}
+.moves {
+  display: flex;
+  justify-content: center;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+[class^="btn"] {
+  margin: 0 22px;
+  height: 170px;
+  width: 170px;
+  cursor: pointer;
+  border: 4px solid;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 90px;
+  background : {
+    color: inherit;
+    position: 100% 0;
+    size: 300%;
+  }
+  transition: 0.5s;
+  &:hover {
+  background-position: 0 100%;
+  color: white;
+  }
+}
+.btnRock {
+  color: $orange;
+  border-color: $orange;
+  background-image: linear-gradient(90deg, $orange 50%, transparent 50%); 
+}
+.btnPaper {
+  color: $green;
+  border-color: $green;
+  background-image: linear-gradient(45deg, $green 50%, transparent 50%);
+}
+.btnScissors {
+  color: $blue;
+  border-color: $blue;
+  background-image: linear-gradient(135deg, $blue 50%, transparent 50%);
+}
+.alert {
+  color: $coral;
+  border: 4px solid $coral; 
+  border-radius: 25px;
+  width: 600px;
+  background: #fff;
+  &Over {
+    margin: 12px;
+    font-family: $font;
+    font-size: 32px;
+  }
+  &Tourn {
+    margin: 17px;
+    font-weight: 800;
+    font-size: 25px;
+    color: $dark-grey;
+  }
+  &New {
+    margin: 17px;
+    font-family: $font;
+    font-size: 22px;
+  }
+}
+.alertHide {
+  display:none;
+}
+.copyright {
+  color: $dark-grey;
+  &Link {
+    color: $dark-grey;
+    text-decoration: none;
+  }
+}
+@media (max-width: 767px){
+  .container {
+    margin: 20px auto;
+  }
+  .header {
+    line-height: 50px;
+    font-size: 38px;
+    &Span1 {
+      font-size: 60px;
+    }
+  }
+  .newGameBtn {
+    font-size: 22px;
+  }
+  .result {
+    width: 90%;
+    font-size: 22px;
+  }
+  .outputResult {
+    font-size: 15px;
+  }
+  [class^="btn"] {
+    margin: 5px 5px;
+    height: 105px;
+    width: 105px;
+    font-size: 60px;
+  }
+  .alert {
+    width: 90%;
+    &Over {
+      margin: 0;
+      font-size: 26px;
+    }
+    &Tourn {
+      margin: 8px;
+      font-size: 20px;
+    }
+    &New {
+      margin: 8px;
+      font-size: 20px;
+    }
+  }
+} /*media*/
