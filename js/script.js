@@ -20,7 +20,7 @@ var moveButtons = document.querySelectorAll('.buttons');
 for (var i = 0; moveButtons.length > i; i++) { 
   var moves = moveButtons[i]; 
   moves.setAttribute('data-move',i+1); //add data-move 
-  moves.addEventListener('click', function (e) { 
+  moves.addEventListener('click', function () { 
     var moveValue = this.getAttribute('data-move'); 
     playerMove(moveValue); 
   })}
