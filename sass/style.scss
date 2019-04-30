@@ -4,6 +4,13 @@ $orange: #ffa502;
 $green: #2ed573;
 $blue: #1e90ff;
 $coral: #ff7f50;
+@mixin centerAbsolutely($top, $left, $right, $transform) { 
+    position: absolute;
+    top: $top; 
+    left: $left;
+    right: $right;
+    transform: $transform; 
+}
 
 * {
 	box-sizing: border-box;
@@ -85,6 +92,7 @@ body {
   color: $dark-grey;
 }
 [class^="btn"] {
+  position: relative;
   margin: 0 20px;
   height: 170px;
   width: 170px;
@@ -103,6 +111,9 @@ body {
   background-position: 0 100%;
   color: #fff;
   }
+}
+.fas {
+  @include centerAbsolutely($top: 50%, $left: none, $right: 50%, $transform:translate(50%, -50%));
 }
 .btnRock {
   color: $orange;
@@ -170,10 +181,6 @@ body {
       color: $coral;
       background-position: 100%;
     }
-    &:active {
-      background: $coral;
-      color: #fff;
-    }
   }
   .result {
     width: 290px;
@@ -194,29 +201,17 @@ body {
       color: $orange;
       background-position: 100%;
     }
-    &:active {
-      background: $orange;
-      color: #fff;
-    }
   }
   .btnPaper {
     &:hover {
       color: $green;
       background-position: 100%;
     }
-    &:active {
-      background: $green;
-      color: #fff;
-    }
   }
   .btnScissors {
     &:hover {
       color: $blue;
       background-position: 100%;
-    }
-    &:active {
-      background: $blue;
-      color: #fff;
     }
   }
   .alert {
