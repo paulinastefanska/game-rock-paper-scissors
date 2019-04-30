@@ -38,7 +38,7 @@ body { margin: 0 auto; font-family: 'Open Sans', sans-serif; text-align: center;
 
 .btnScissors { color: #1e90ff; border-color: #1e90ff; background-image: linear-gradient(135deg, #1e90ff 50%, transparent 50%); }
 
-.alert { color: #ff7f50; border: 4px solid #ff7f50; border-radius: 25px; width: 600px; background: #fff; }
+.alert { margin: 0; color: #ff7f50; border: 4px solid #ff7f50; border-radius: 25px; width: 600px; background: #fff; }
 
 .alertOver { margin: 12px; font-family: "Exo 2", sans-serif; font-size: 32px; }
 
@@ -59,7 +59,7 @@ body { margin: 0 auto; font-family: 'Open Sans', sans-serif; text-align: center;
   .result { width: 90%; font-size: 22px; }
   .outputResult { font-size: 15px; }
   [class^="btn"] { margin: 5px 5px; height: 105px; width: 105px; font-size: 60px; }
-  .alert { width: 90%; }
+  .alert { margin: 0; width: 90%; }
   .alertOver { margin: 0; font-size: 26px; }
   .alertTourn { margin: 8px; font-size: 20px; }
   .alertNew { margin: 8px; font-size: 20px; } }
