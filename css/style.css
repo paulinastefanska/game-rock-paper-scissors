@@ -56,8 +56,8 @@ body { margin: 0 auto; font-family: 'Open Sans', sans-serif; text-align: center;
   .header { line-height: 50px; font-size: 35px; }
   .headerSpan1 { font-size: 55px; }
   .newGameBtn { font-size: 22px; }
-  .result { width: 90%; font-size: 22px; }
-  .outputResult { font-size: 15px; }
+  .result { width: 325px; font-size: 22px; }
+  .outputResult { font-size: 14px; }
   [class^="btn"] { margin: 5px 5px; height: 100px; width: 100px; font-size: 60px; }
   .alert { margin: 0; width: 325px; }
   .alertOver { margin: 0; font-size: 26px; }
