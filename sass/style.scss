@@ -62,7 +62,7 @@ body {
   }
   color: $coral;
   background : {
-    image: linear-gradient(45deg, $coral 50%, transparent 50%); 
+    image: linear-gradient(90deg, $coral 50%, transparent 50%); 
     color: inherit;
     position: 100% 0;
     size: 300%;
@@ -118,7 +118,7 @@ body {
 .btnRock {
   color: $orange;
   border-color: $orange;
-  background-image: linear-gradient(90deg, $orange 50%, transparent 50%); 
+  background-image: linear-gradient(135deg, $orange 50%, transparent 50%); 
 }
 .btnPaper {
   color: $green;
@@ -169,17 +169,17 @@ body {
   }
   .header {
     line-height: 50px;
-    font-size: 35px;
+    font-size: 26px;
     &Span1 {
       font-size: 55px;
     }
   }
   .newGameBtn {
+    padding: 5px 60px 10px;
     background: none;
     font-size: 22px;
     &:hover {
       color: $coral;
-      background-position: 100%;
     }
   }
   .result {
@@ -199,19 +199,16 @@ body {
   .btnRock {
     &:hover{
       color: $orange;
-      background-position: 100%;
     }
   }
   .btnPaper {
     &:hover {
       color: $green;
-      background-position: 100%;
     }
   }
   .btnScissors {
     &:hover {
       color: $blue;
-      background-position: 100%;
     }
   }
   .alert {
