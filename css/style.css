@@ -56,6 +56,7 @@ body { margin: 0 auto; font-family: 'Open Sans', sans-serif; text-align: center;
   .newGameBtn { padding: 5px 60px 10px; background: none; font-size: 22px; }
   .newGameBtn:hover { color: #ff7f50; }
   .result { width: 290px; font-size: 22px; }
+  .resultParagraph { padding-top: 5px; padding-bottom: 10px; }
   .outputResult { font-size: 14px; }
   [class^="btn"] { margin: 5px 5px; height: 86px; width: 86px; font-size: 55px; background: none; }
   .btnRock:hover { color: #ffa502; }
