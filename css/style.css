@@ -14,7 +14,7 @@ body { margin: 0; font-family: 'Open Sans', sans-serif; text-align: center; }
 
 .headerSpan4 { color: #1e90ff; }
 
-.newGameBtn { height: 70px; width: 350px; cursor: pointer; border: 4px solid #ff7f50; border-radius: 25px; font-family: "Exo 2", sans-serif; font-weight: bold; font-size: 25px; color: #ff7f50; background-image: linear-gradient(90deg, #ff7f50 50%, transparent 50%); background-color: inherit; background-position: 100% 0; background-size: 300%; transition: 0.5s; }
+.newGameBtn { height: 70px; width: 350px; cursor: pointer; border: 4px solid #ff7f50; border-radius: 25px; font-family: "Exo 2", sans-serif; font-weight: bold; font-size: 25px; color: #ff7f50; background-image: linear-gradient(90deg, #ff7f50 50%, transparent 50%); background-color: inherit; background-position: 100% 0; background-size: 300%; transition: 0.4s; }
 
 .newGameBtn:hover { background-position: 0 100%; color: #fff; }
 
@@ -22,7 +22,7 @@ body { margin: 0; font-family: 'Open Sans', sans-serif; text-align: center; }
 
 .outputResult { font-size: 20px; font-weight: 700; color: #747d8c; }
 
-[class^="btn"] { position: relative; margin: 0 20px; height: 170px; width: 170px; cursor: pointer; border: 4px solid; border-radius: 25px; font-weight: bold; font-size: 110px; background-color: inherit; background-position: 100% 0; background-size: 300%; transition: 0.5s; }
+[class^="btn"] { display: inline-block; position: relative; margin: 0 20px; height: 170px; width: 170px; cursor: pointer; border: 4px solid; border-radius: 25px; font-weight: bold; font-size: 110px; background-color: inherit; background-position: 100% 0; background-size: 300%; transition: 0.4s; }
 
 [class^="btn"]:hover { background-position: 0 100%; color: #fff; }
 

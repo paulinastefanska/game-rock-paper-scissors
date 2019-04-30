@@ -68,7 +68,7 @@ body {
     position: 100% 0;
     size: 300%;
   }
-  transition: 0.5s;
+  transition: 0.4s;
   &:hover {
     background-position: 0 100%;
     color: #fff;
@@ -89,6 +89,7 @@ body {
   color: $dark-grey;
 }
 [class^="btn"] {
+  display: inline-block;
   position: relative;
   margin: 0 20px;
   height: 170px;
@@ -103,7 +104,7 @@ body {
     position: 100% 0;
     size: 300%;
   }
-  transition: 0.5s;
+  transition: 0.4s;
   &:hover {
   background-position: 0 100%;
   color: #fff;
