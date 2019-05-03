@@ -22,7 +22,7 @@ body { margin: 0; font-family: 'Open Sans', sans-serif; text-align: center; }
 
 .outputResult { font-size: 20px; font-weight: 700; color: #747d8c; }
 
-[class^="btn"] { display: inline-block; position: relative; margin: 0 20px; height: 170px; width: 170px; cursor: pointer; border: 4px solid; border-radius: 25px; font-weight: bold; font-size: 110px; background-color: inherit; background-position: 100% 0; background-size: 300%; transition: 0.4s; }
+[class^="btn"] { display: inline-block; position: relative; margin: 0 20px; padding: 0; height: 170px; width: 170px; cursor: pointer; border: 4px solid; border-radius: 25px; font-weight: bold; font-size: 110px; background-color: inherit; background-position: 100% 0; background-size: 300%; transition: 0.4s; }
 
 [class^="btn"]:hover { background-position: 0 100%; color: #fff; }
 
