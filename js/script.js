@@ -15,6 +15,16 @@ output.innerHTML = 'Make your move!';
 resultPlayer.innerHTML = 0;
 resultComputer.innerHTML = 0;
 
+// game progress info
+var params = {
+    playerScore: 0,
+    computerScore: 0,
+    rounds: '',
+    palyerMove: '',
+    computerMove: '',
+    progress: []
+}
+
  // button function
 var moveButtons = document.querySelectorAll('.buttons'); 
 for (var i = 0; moveButtons.length > i; i++) { 
@@ -22,7 +32,7 @@ for (var i = 0; moveButtons.length > i; i++) {
   moves.setAttribute('data-move',i+1); //add data-move 
   moves.addEventListener('click', function () { 
     var moveValue = this.getAttribute('data-move'); 
-    playerMove(moveValue); 
+    params.playerMove(moveValue); 
   })}
 buttonNewGame.addEventListener('click', function(){ 
   newGame(); 
@@ -38,18 +48,18 @@ function playerMove(playerM) {
   var computerMove=computerChoice();
   var moveNames=['Rock','Paper','Scissors'];
   
-  if (computerMove == playerM) { 
+  if (params.computerMove == params.playerM) { 
     // tie
     output.innerHTML = 'It`s a tie!';
   }
-  else if ((computerMove == 2 && playerM == 1) || (computerMove == 3 && playerM == 2) || (computerMove == 1 && playerM == 3)) {
+  else if ((params.computerMove == 2 && params.playerM == 1) || (params.computerMove == 3 && params.playerM == 2) || (params.computerMove == 1 && params.playerM == 3)) {
     // player lose
-    output.innerHTML = 'Sorry, You lose! Computer played '+ moveNames[computerMove-1];
+    output.innerHTML = 'Sorry, You lose! Computer played '+ moveNames[params.computerMove-1];
     updateResoults(0);
   } 
   else {
     // player won
-    output.innerHTML = 'Congrats, You won! Computer played '+ moveNames[computerMove-1];
+    output.innerHTML = 'Congrats, You won! Computer played '+ moveNames[params.computerMove-1];
     updateResoults(1);
   }   
 };
@@ -60,21 +70,23 @@ function updateResoults(playerwin) {
   var resultC=parseInt(resultComputer.innerHTML);
   if (playerwin) {
     resultP++;
-    resultPlayer.innerHTML=resultP;
+    resultPlayer.innerHTML=params.resultP;
   }
   else {
     resultC++;
-    resultComputer.innerHTML=resultC;
+    resultComputer.innerHTML=params.resultC;
   }
   if (resultP > 2) {
        resultTourn.innerHTML= 'You have WON the game!';
        alert.classList.remove('alertHide');
        buttons.classList.add('alertHide');
+       resultPlayer.innerHTML = params.rounds;
   }
   else if (resultC > 2) {
       resultTourn.innerHTML= 'You have LOST the game!';
       alert.classList.remove('alertHide');
       buttons.classList.add('alertHide');
+      resultComputer.innerHTML = params.rounds;
   }     
 };
 
