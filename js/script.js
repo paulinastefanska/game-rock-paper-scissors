@@ -10,17 +10,18 @@ var resultComputer = document.getElementById('compResult');
 var alert = document.getElementById('alert');
 var resultTourn = document.getElementById('resultTourn');
 var output = document.getElementById('output');
+var tableStats = document.getElementById("tableStat");
 
-output.innerHTML = 'Make your move!';
+output.innerHTML = 'Make your move! Let`s fight 3 rounds!';
 resultPlayer.innerHTML = 0;
 resultComputer.innerHTML = 0;
 
 // game progress info
 var params = {
-    playerScore: 0,
-    computerScore: 0,
-    rounds: '',
-    palyerMove: '',
+    resultTorun: '',
+    resultPlayer: '',
+    resultComputer: '',
+    palyerM: '',
     computerMove: '',
     progress: []
 }
@@ -48,25 +49,22 @@ function playerMove(playerM) {
   var computerMove=computerChoice();
   var moveNames=['Rock','Paper','Scissors'];
 
-  if (params.computerMove == params.playerM) { 
+  if (computerMove == playerM) { 
     // tie
     output.innerHTML = 'It`s a tie!';
     params.progress.push({content: 'It`s a tie!'});
-            updateResoults();
   }
-  else if ((params.computerMove == 2 && params.playerM == 1) || (params.computerMove == 3 && params.playerM == 2) || (params.computerMove == 1 && params.playerM == 3)) {
+  else if ((computerMove == 2 && playerM == 1) || (computerMove == 3 && playerM == 2) || (computerMove == 1 && playerM == 3)) {
     // player lose
-    output.innerHTML = 'Sorry, You lose! Computer played '+ moveNames[params.computerMove-1];
+    output.innerHTML = 'Sorry, You lose! Computer played '+ moveNames[computerMove-1];
     updateResoults(0);
     params.progress.push({content: 'Sorry, You lose! You palyed ' + moveNames[params.playerM-1] + 'Computer played '+ moveNames[params.computerMove-1]});
-            updateResoults();
   } 
   else {
     // player won
-    output.innerHTML = 'Congrats, You won! Computer played '+ moveNames[params.computerMove-1];
+    output.innerHTML = 'Congrats, You won! Computer played '+ moveNames[computerMove-1];
     updateResoults(1);
     params.progress.push({content: 'Congrats, You won! You palyed ' + moveNames[params.playerM-1] + 'Computer played '+ moveNames[params.computerMove-1]});
-            updateResoults();
   }   
 }; 
 
@@ -74,30 +72,24 @@ function playerMove(playerM) {
 function updateResoults(playerwin) {
   var resultP=parseInt(resultPlayer.innerHTML);
   var resultC=parseInt(resultComputer.innerHTML);
-  var scoreTable = document.createElement('p');       
-    for (var c in params.progress) {
-        scoreTable.innerHTML = params.progress.length + '. ' + params.progress[c].content;
-        alert.appendChild(scoreTable);
-    } 
+  
   if (playerwin) {
     resultP++;
-    resultPlayer.innerHTML=params.resultP;
+    resultPlayer.innerHTML=resultP;
   }
   else {
     resultC++;
-    resultComputer.innerHTML=params.resultC;
+    resultComputer.innerHTML=resultC;
   }
   if (resultP > 2) {
        resultTourn.innerHTML= 'You have WON the game!';
        alert.classList.remove('alertHide');
        buttons.classList.add('alertHide');
-       resultPlayer.innerHTML = params.rounds;
   }
   else if (resultC > 2) {
       resultTourn.innerHTML= 'You have LOST the game!';
       alert.classList.remove('alertHide');
       buttons.classList.add('alertHide');
-      resultComputer.innerHTML = params.rounds;
   }     
 };
 
@@ -105,7 +97,7 @@ function updateResoults(playerwin) {
 function newGame() {
   resultPlayer.innerHTML=0;
   resultComputer.innerHTML=0;
-  output.innerHTML = 'Make your move!';  
+  output.innerHTML = 'Make your move! Let`s fight 3 rounds!';  
   alert.classList.add('alertHide');
   buttons.classList.remove('alertHide');
 };
