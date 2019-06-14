@@ -16,16 +16,6 @@ output.innerHTML = 'Make your move! Let`s fight 3 rounds!';
 resultPlayer.innerHTML = 0;
 resultComputer.innerHTML = 0;
 
-// game progress info
-var params = {
-    resultTorun: '',
-    resultPlayer: '',
-    resultComputer: '',
-    palyerM: '',
-    computerMove: '',
-    progress: []
-}
-
  // button function
 var moveButtons = document.querySelectorAll('.buttons'); 
 for (var i = 0; moveButtons.length > i; i++) { 
@@ -52,19 +42,16 @@ function playerMove(playerM) {
   if (computerMove == playerM) { 
     // tie
     output.innerHTML = 'It`s a tie!';
-    params.progress.push({content: 'It`s a tie!'});
   }
   else if ((computerMove == 2 && playerM == 1) || (computerMove == 3 && playerM == 2) || (computerMove == 1 && playerM == 3)) {
     // player lose
     output.innerHTML = 'Sorry, You lose! Computer played '+ moveNames[computerMove-1];
     updateResoults(0);
-    params.progress.push({content: 'Sorry, You lose! You palyed ' + moveNames[params.playerM-1] + 'Computer played '+ moveNames[params.computerMove-1]});
   } 
   else {
     // player won
     output.innerHTML = 'Congrats, You won! Computer played '+ moveNames[computerMove-1];
     updateResoults(1);
-    params.progress.push({content: 'Congrats, You won! You palyed ' + moveNames[params.playerM-1] + 'Computer played '+ moveNames[params.computerMove-1]});
   }   
 }; 
 
@@ -82,14 +69,14 @@ function updateResoults(playerwin) {
     resultComputer.innerHTML=resultC;
   }
   if (resultP > 2) {
-       resultTourn.innerHTML= 'You have WON the game!';
-       alert.classList.remove('alertHide');
-       buttons.classList.add('alertHide');
+    resultTourn.innerHTML= 'You have WON the game!';
+    alert.classList.remove('alertHide');
+    buttons.classList.add('alertHide');
   }
   else if (resultC > 2) {
-      resultTourn.innerHTML= 'You have LOST the game!';
-      alert.classList.remove('alertHide');
-      buttons.classList.add('alertHide');
+    resultTourn.innerHTML= 'You have LOST the game!';
+    alert.classList.remove('alertHide');
+    buttons.classList.add('alertHide');
   }     
 };
 
